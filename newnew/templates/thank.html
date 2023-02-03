@@ -1,0 +1,16 @@
+<html>
+    <style>
+        body{
+            text-align:center;
+        }
+    </style>
+    <body>
+        <b>
+            <img src = "t.jpg">
+            {{ message }}
+        </b>
+        <form method = "POST" action={% url 'adm' %}>
+            {% csrf_token %}
+        <input type = "submit" placeholder = "save">
+    </body>
+    </html>

@@ -1,0 +1,92 @@
+<HTML DOCTYPE!>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <title>Hompage</title>
+        <style>
+            .black{
+                color: white;                                     
+                background-color:black;
+                padding: 5.5px;
+            }
+            body{
+              background-color:aqua;
+            }
+            p{
+              background-color:grey;
+              text-align:center;
+              padding:50px;
+    
+            }
+        </style>
+        
+      </head>
+      <body>
+        <div class="black">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">SGGS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/admission">Admission <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/student">Student <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/marks">Marks <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/feedback">Feedback <span class="sr-only">(current)</span></a>
+                  </li>
+                  
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/admin">Admin <span class="sr-only">(current)</span></a>
+                  </li>
+                   
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <br>
+        <br><br><br><br>
+        <p>
+          <strong>
+            <i>
+              <b>
+            WELCOME TO SGGS COLLEGE
+           
+              </b>
+            </i>
+          </strong><br>
+          <img src = "/static/download.jfif">
+        </p>
+        <div>
+        <form method="post" action="index">
+          {% csrf_token %}
+          <input type="text" name='name' placeholder='title of mail' Required>
+          <br>
+          <input type="email" name='email' placeholder='The company  E-mail address' Required>
+          <br>
+          <input type="email" name='email' placeholder='The company  E-mail address' Required>
+          <br>
+          <textarea  name='message' placeholder='Massage to be delivered' Required>
+          </form>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </body>
+    </html>

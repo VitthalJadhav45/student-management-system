@@ -1,0 +1,65 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>student</title>
+        <p>
+            <b>
+                PLEASE FILL THE FORM
+            </b>
+        </p>
+
+        <style>
+            h1 {
+              color: blue;
+              font-family: verdana;
+              font-size: 300%;
+            
+            }
+            p  {
+              color: red;
+              font-family: courier;
+              font-size: 160%;
+            }
+            
+            
+            body {
+              background-color: powderblue;
+            }
+            h1 {
+              color: blue;
+            }
+            p {
+              color: red;
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <form method = "POST" action={% url 'stu' %}>
+                {% csrf_token %}
+            <label>Enter Name</label>
+            <input type = "text" name = "name"><br>
+            <label>Reg No</label>
+            <input type = "text" name = "regno"><br>
+            <label>Address</label>
+            <input type = "text" name = "address"><br>
+            <label>Taluka</label>
+            <input type = "text" name = "taluka"><br>
+            <label>District</label>
+            <input type = "text" name = "district"><br>
+            <label>State</label>
+            <input type = "text" name = "state"><br>
+            <label>Pin Code</label>
+            <input type = "text" name = "pincode"><br>
+            <input type = "submit" placeholder="submit">
+        </div>
+    </body>
+    <footer>
+        <p>
+            THANK YOU......
+        </p>
+    </footer>
+</html>
+    
+
+

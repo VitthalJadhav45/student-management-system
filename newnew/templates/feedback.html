@@ -1,0 +1,185 @@
+<html DOCTYPE!>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>feedback</title>
+            {% include "index.html" %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+         <style>
+            .myTable { 
+              width: 40%;
+              text-align: left;
+              background-color: lemonchiffon;
+              border-collapse: collapse; 
+              }
+            .myTable th { 
+              background-color: lightblue;
+              color: red; 
+              }
+            .myTable td, 
+            .myTable th { 
+              padding: 10px;
+              border: 2px solid goldenrod; 
+              }
+    
+              .myTable1 { 
+              width: 40%;
+              text-align: left;
+              background-color: lightblue;
+              border-collapse: collapse; 
+              }
+            .myTable1 th { 
+              background-color: goldenrod;
+              color: white; 
+              }
+            .myTable1 td, 
+            .myTable1 th { 
+              padding: 10px;
+              border: 2px solid goldenrod; 
+              }
+    
+              hr{
+              color: #f00;
+            background-color: #f00;
+            height: 5px;
+              }
+              h1 {
+                color: blue;
+                font-family: verdana;
+                font-size: 300%;
+              
+              }
+              p  {
+                color: red;
+                font-family: courier;
+                font-size: 160%;
+              }
+              
+              
+              body {
+                background-color: powderblue;
+              }
+              h1 {
+                color: blue;
+              }
+              p {
+                color: red;
+              }
+            
+            </style>
+    
+    
+        </head>
+        
+        <body>
+            <h2> <center>SGGSIE&T, Nanded</h2></center>
+    <div>
+        <table border=1  color="red" align="center" >
+        <h3><center><font color="red"></font> </h3></center>
+        <hr color="green">
+        <h4> <center> <b><i>ADMISSION INFO </i></b></center> </h4>
+       
+
+               <table border=1  color="red" align="center" >
+          <tr>  
+        <th>Student Name </th>
+        <th> Registration No </th>
+        <th> Class </th>
+        <th> Branch </th>
+        <th> Date Of Admission </th>
+        <th> Semester </th>
+          </tr> 
+        
+        {% for aentry in adata %}
+        <tr>
+  <td align="center"> {{ aentry.sname }} </td>        
+  <td align="center"> {{ aentry.regno }} </td>
+  <td align="center"> {{ aentry.classes }} </td>
+  <td align="center"> {{ aentry.branch }} </td>
+  <td align="center"> {{ aentry.doa}} </td>
+  <td align="center"> {{ aentry.semester }} </td>
+        </tr>
+        {% endfor %}
+   <td align="center"> 
+      <a href = {% url 'adm' %}>TAKE ADMISSION </a>
+    </td>
+    </table>
+    </div>
+            <div>
+              <h3><center><font color="red"></font> </h3></center>
+              <hr color="green">
+              <h4> <center> <b><i>STUDENT INFO </i></b></center> </h4>
+             
+    
+                     <table border=1  color="red" align="center" >
+                    <tr>
+                      
+              <th> Student Name </th>
+              <th> Registration Number </th>
+              <th> Address </th>
+              <th> Taluka </th>
+              <th> District </th>
+              <th> State </th>
+              <th> Pincode </th>
+                     </tr>
+     
+    
+              
+    
+                    {% for entry in data %}
+                    <tr>
+                      
+              <td align="center"> {{ entry.sname }} </td>
+              <td align="center"> {{ entry.regno }} </td>
+              <td align="center"> {{ entry.address }} </td>
+              <td align="center"> {{ entry.taluka }} </td>
+              <td align="center"> {{ entry.district }} </td>
+              <td align="center"> {{ entry.state }} </td>
+              <td align="center"> {{ entry.pincode }} </td>
+                 </tr>
+                        
+                {% endfor %}
+                <td align="center"> 
+                  <a href = {% url 'stu' %}>ADD STUDENT INFO </a>
+                </td>
+                </table>
+                </div>
+                <br>
+            <div>
+                <table border=1  color="red" align="center" >
+                <h3><center><font color="red"></font> </h3></center>
+                <hr color="green">
+                <h4> <center> <b><i>MARK INFO </i></b></center> </h4>
+               
+      
+                       <table border=1  color="red" align="center" >
+                  <tr>  
+                <th> Reg No </th>
+                <th> Subject </th>
+                <th> Marks </th>
+                <th> Semester </th>
+                <th> Year </th>
+                  </tr> 
+                
+                {% for mentry in mdata %}
+                <tr>
+          <td align="center"> {{ mentry.regno }} </td>        
+          <td align="center"> {{ mentry.subject }} </td>
+          <td align="center"> {{ mentry.mark }} </td>
+          <td align="center"> {{ mentry.semester }} </td>
+          <td align="center"> {{ mentry.year }} </td>
+                </tr>
+                {% endfor %}
+          <td align="center"> 
+                <a href = {% url 'mar' %}>ADD MARKS INFO </a>
+          </td>
+          </table>
+          </div>
+            
+        </body>
+    </html>
+    
+    
+    
+    

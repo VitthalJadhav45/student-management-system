@@ -1,0 +1,19 @@
+<html>
+    <head>
+        {% include "index.html" %}
+    </head>
+    <body>
+        <form method="post" action={% url 'sendEmail' %}>
+            {% csrf_token %}
+            <input type="text" name='name' placeholder='title of mail' Required>
+            <br>
+            <br>
+            <input type="email" name='email' placeholder='The company  E-mail address' Required>
+            <br>
+            <br>
+            <input type="message" name='message' placeholder="message to be deliver" Required>
+            <br>
+            <br>
+            <button  class="btn btn-primary at-2" type="submit">Send</button>
+          </form>
+</html>

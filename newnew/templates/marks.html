@@ -1,0 +1,55 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>marks</title>
+        <p>
+            <b>
+                PLEASE FILL THE MARKS DETAIL'S
+            </b>
+        </p>
+        <style>
+            h1 {
+              color: blue;
+              font-family: verdana;
+              font-size: 300%;
+            
+            }
+            p  {
+              color: red;
+              font-family: courier;
+              font-size: 160%;
+            }
+            
+            
+            body {
+              background-color: powderblue;
+            }
+            h1 {
+              color: blue;
+            }
+            p {
+              color: red;
+            }
+            </style>
+    </head>
+    <body>
+        <form method = "POST" action={% url 'mar' %}>
+            {% csrf_token %}
+        <label>Reg No</label>
+        <input type = "text" name = "regno"><br>
+        <label>Subject</label>
+        <input type = "text" name = "subject"><br>
+        <label>Mark</label>
+        <input type = "text" name = "mark"><br>
+        <label>Semester</label>
+        <input type = "text" name = "semester"><br>
+        <label>Year</label>
+        <input type = "text" name = "year"><br>
+        <input type = "submit" value = "save">
+    </body>
+    <footer>
+        <p>
+            THANK YOU......
+        </p>
+    </footer>
+</html>

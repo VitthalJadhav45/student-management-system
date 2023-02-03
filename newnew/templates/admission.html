@@ -1,0 +1,58 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>admission</title>
+        <p>
+            <b>
+                PLEASE FILL THE ADMISSION DETAILS
+            </b>
+        </p>
+        <style>
+            h1 {
+              color: blue;
+              font-family: verdana;
+              font-size: 300%;
+            
+            }
+            p  {
+              color: red;
+              font-family: courier;
+              font-size: 160%;
+            }
+            
+            
+            body {
+              background-color: powderblue;
+            }
+            h1 {
+              color: blue;
+            }
+            p {
+              color: red;
+            }
+            </style>
+    </head>
+    <body>
+        <form method = "POST" action={% url 'adm' %}>
+            {% csrf_token %}
+        <label>Name</label>
+        <input type = "text" name = "sname"><br>
+        <label>Reg No</label>
+        <input type = "text" name = "regno"><br>
+        <label>Class</label>
+        <input type = "text" name = "classes"><br>
+        <label>Branch</label>
+        <input type = "text" name = "branch"><br>
+        <label>Date of admission</label>
+        <input type = "date" name = "doa"><br>
+        <label>Semester</label>
+        <input type = "text" name = "semester"><br>
+        <input type = "submit" value = "save">
+    </body>
+    <footer>
+        <p>
+            {{message}}
+            THANK YOU......
+        </p>
+    </footer>
+</html>
